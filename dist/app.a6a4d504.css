@@ -55,6 +55,8 @@
 }
 .w-button-group > .w-button {
   border-radius: 0;
+}
+.w-button-group > .w-button:not(:first-child) {
   margin-left: -1px;
 }
 .w-button-group > .w-button:first-child {
