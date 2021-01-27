@@ -6,5 +6,5 @@
 
 使用本框架前，请在CSS中 开启 border-box
 ```
-*{box-sizing: border-box;}
+*{box-sizing:border-box}
 ```
