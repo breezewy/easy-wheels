@@ -34,3 +34,7 @@
 .g-button.icon-right > .content {
   order: 1;
 }
+.w-icon {
+  width: 1em;
+  height: 1em;
+}
