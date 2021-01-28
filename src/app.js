@@ -7,7 +7,9 @@ Vue.component('w-icon', Icon)
 Vue.component('w-button-group',ButtonGroup)
 
 import chai from 'chai'
+import spies from 'chai-spies'
 const expect = chai.expect
+chai.use(spies)
 
 new Vue({
   el: '#app',
@@ -91,10 +93,10 @@ new Vue({
     }
   })
   vm.$mount()
-  vm.$on('click', function () {
-    expect(1).to.eq(1)
-  })
+  let spy = chai.spy(function(){})
+  vm.$on('click', spy)
   let button = vm.$el
-  console.log(button)
   button.click()
+  // 期望间谍函数被调用了
+  expect(spy).to.have.been.called()
 }
