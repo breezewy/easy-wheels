@@ -11,7 +11,11 @@
 </template>
 
 <script>
+import icon from './icon'
 export default {
+  components:{
+    'w-icon':icon
+  },
   // props: ["icon", "iconPosition"],
   props:{
     icon:{},

@@ -20,83 +20,96 @@ new Vue({
   }
 })
 
-// 单元测试
-{
-  const Constructor = Vue.extend(Button)
-  const vm = new Constructor({
-    propsData: {
-      icon:'settings'
-    }
+try {
+    // 单元测试
+  {
+    // 测试按钮含有 icon
+    const Constructor = Vue.extend(Button)
+    const vm = new Constructor({
+      propsData: {
+        icon:'settings'
+      }
+    })
+    vm.$mount()
+
+    const useElement = vm.$el.querySelector('use')
+    const href = useElement.getAttribute('xlink:href')
+    expect(href).to.eq('#i-settings')
+  }
+
+  {
+    // 测试 按钮为 loading 状态
+    const Constructor = Vue.extend(Button)
+    const vm = new Constructor({
+      propsData: {
+        icon: 'settings',
+        loading:true
+      }
+    })
+    vm.$mount()
+
+    const useElement = vm.$el.querySelector('use')
+    const href = useElement.getAttribute('xlink:href')
+    expect(href).to.eq('#i-loading')
+  }
+
+  {
+    // 测试 默认情况下 icon 的排序为1
+    const div = document.createElement('div')
+    document.body.appendChild(div)
+    const Constructor = Vue.extend(Button)
+    const vm = new Constructor({
+      propsData: {
+        icon: 'settings'
+      }
+    })
+    vm.$mount(div)
+
+    let svg = vm.$el.querySelector('svg')
+    let { order } = window.getComputedStyle(svg)
+    expect(order).to.eq('1')
+    vm.$el.remove()
+    vm.$destroy()
+  }
+  {
+    // 测试 iconPosition 为 right情况下 icon的排序为2
+    const div = document.createElement('div')
+    document.body.appendChild(div)
+    const Constructor = Vue.extend(Button)
+    const vm = new Constructor({
+      propsData: {
+        icon: 'settings',
+        iconPosition:'right'
+      }
+    })
+    vm.$mount(div)
+
+    let svg = vm.$el.querySelector('svg')
+    let { order } = window.getComputedStyle(svg)
+    expect(order).to.eq('2')
+    vm.$el.remove()
+    vm.$destroy()
+  }
+  {
+    // 测试 事件函数是否被调用
+    const Constructor = Vue.extend(Button)
+    const vm = new Constructor({
+      propsData: {
+        icon: 'settings'
+      }
+    })
+    vm.$mount()
+    let spy = chai.spy(function(){})
+    vm.$on('click', spy)
+    let button = vm.$el
+    button.click()
+    // 期望间谍函数被调用了
+    expect(spy).to.have.been.called()
+  }
+} catch (error) {
+  window.errors = [error]
+} finally {
+  window.errors && window.errors.forEach((error) => {
+    console.error(error.message)
   })
-  vm.$mount()
-
-  const useElement = vm.$el.querySelector('use')
-  const href = useElement.getAttribute('xlink:href')
-  expect(href).to.eq('#i-settings')
-}
-
-{
-  const Constructor = Vue.extend(Button)
-  const vm = new Constructor({
-    propsData: {
-      icon: 'settings',
-      loading:true
-    }
-  })
-  vm.$mount()
-
-  const useElement = vm.$el.querySelector('use')
-  const href = useElement.getAttribute('xlink:href')
-  expect(href).to.eq('#i-loading')
-}
-
-{
-  const div = document.createElement('div')
-  document.body.appendChild(div)
-  const Constructor = Vue.extend(Button)
-  const vm = new Constructor({
-    propsData: {
-      icon: 'settings'
-    }
-  })
-  vm.$mount(div)
-
-  let svg = vm.$el.querySelector('svg')
-  let { order } = window.getComputedStyle(svg)
-  expect(order).to.eq('1')
-  vm.$el.remove()
-  vm.$destroy()
-}
-{
-  const div = document.createElement('div')
-  document.body.appendChild(div)
-  const Constructor = Vue.extend(Button)
-  const vm = new Constructor({
-    propsData: {
-      icon: 'settings',
-      iconPosition:'right'
-    }
-  })
-  vm.$mount(div)
-
-  let svg = vm.$el.querySelector('svg')
-  let { order } = window.getComputedStyle(svg)
-  expect(order).to.eq('2')
-  vm.$el.remove()
-  vm.$destroy()
-}
-{
-  const Constructor = Vue.extend(Button)
-  const vm = new Constructor({
-    propsData: {
-      icon: 'settings'
-    }
-  })
-  vm.$mount()
-  let spy = chai.spy(function(){})
-  vm.$on('click', spy)
-  let button = vm.$el
-  button.click()
-  // 期望间谍函数被调用了
-  expect(spy).to.have.been.called()
 }

@@ -1,3 +1,7 @@
+.w-icon {
+  width: 1em;
+  height: 1em;
+}
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -44,10 +48,6 @@
 }
 .w-button .loading {
   animation: spin 1s infinite linear;
-}
-.w-icon {
-  width: 1em;
-  height: 1em;
 }
 .w-button-group {
   display: inline-flex;
