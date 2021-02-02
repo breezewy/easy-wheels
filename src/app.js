@@ -2,9 +2,11 @@ import Vue from 'vue';
 import Button from './button'
 import Icon from './icon'
 import ButtonGroup from './button-group'
+import Input from './input'
 Vue.component('w-button', Button)
 Vue.component('w-icon', Icon)
-Vue.component('w-button-group',ButtonGroup)
+Vue.component('w-button-group', ButtonGroup)
+Vue.component('w-input',Input)
 
 import chai from 'chai'
 import spies from 'chai-spies'

@@ -6,6 +6,7 @@
 
 <script>
 export default {
+  name:'wButtonGroup',
   mounted(){
     let childNode = this.$el.children
     for(let node of childNode){
@@ -18,7 +19,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   .w-button-group{
     display: inline-flex;
     vertical-align: middle;
