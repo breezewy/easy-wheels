@@ -19,6 +19,7 @@ new Vue({
     loading1: false,
     loading2: false,
     loading3: false,
+    message:'hi'
   },
   created() {
     setTimeout(() => {
@@ -30,6 +31,9 @@ new Vue({
   methods: {
     inputChange(e) {
       console.log(e)
+    },
+    changeMessage() {
+      this.message += 'i'
     }
   }
 })
