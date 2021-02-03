@@ -41,14 +41,17 @@
 
 <body>
   <div id="app">
-    <div class="box">
+    <!-- <div class="box">
       <w-input value="张三"></w-input>
       <w-input value="李四" disabled></w-input>
       <w-input value="王五" readonly></w-input>
-    </div>
+    </div> -->
     <div class="box">
-      <w-input value="麻子" error="姓名不能少于5个字"></w-input>
+      <w-input value="麻子" @change="inputChange"></w-input>
     </div>
+    <!-- <div class="box">
+      <w-input value="麻子" error="用户名不能少于6位"></w-input>
+    </div> -->
     <div class="box">
       <w-button :loading="loading1" @click="loading1 = !loading1">
         按钮

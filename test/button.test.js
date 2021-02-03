@@ -9,7 +9,7 @@ describe('Button', () => {
     // BDD 行为驱动测试
 
     it('存在.', () => {
-        expect(Button).to.be.ok
+        expect(Button).to.be.exist
     })
     it('可以设置icon.', () => {
         const Constructor = Vue.extend(Button)
@@ -76,6 +76,5 @@ describe('Button', () => {
         vm.$on('click', callback)
         vm.$el.click()
         expect(callback).to.have.been.called
-
     })
 })
