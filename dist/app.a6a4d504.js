@@ -12907,13 +12907,18 @@ var _default = {
   props: {
     gutter: [Number, String]
   },
-  created: function created() {
-    console.log('row created');
+  computed: {
+    rowStyle: function rowStyle() {
+      var gutter = this.gutter;
+      return {
+        marginLeft: -gutter / 2 + 'px',
+        marginRight: -gutter / 2 + 'px'
+      };
+    }
   },
   mounted: function mounted() {
     var _this = this;
 
-    console.log(this.$children);
     this.$children.forEach(function (vm) {
       vm.gutter = _this.gutter;
     });
@@ -12934,13 +12939,7 @@ exports.default = _default;
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    {
-      staticClass: "row",
-      style: {
-        marginLeft: -_vm.gutter / 2 + "px",
-        marginRight: -_vm.gutter / 2 + "px"
-      }
-    },
+    { staticClass: "row", style: _vm.rowStyle },
     [_vm._t("default")],
     2
   )
@@ -12991,10 +12990,6 @@ exports.default = void 0;
 //
 //
 //
-//
-//
-//
-//
 var _default = {
   name: 'wCol',
   props: {
@@ -13005,13 +13000,20 @@ var _default = {
     return {
       gutter: 0
     };
-  } // created(){
-  //   console.log('col created')
-  // },
-  // mounted(){
-  //   console.log('col mounted')
-  // }
-
+  },
+  computed: {
+    colClass: function colClass() {
+      var span = this.span,
+          offset = this.offset;
+      return [span && "col-".concat(span), offset && "offset-".concat(offset)];
+    },
+    culStyle: function culStyle() {
+      return {
+        paddingLeft: this.gutter / 2 + 'px',
+        paddingRight: this.gutter / 2 + 'px'
+      };
+    }
+  }
 };
 exports.default = _default;
         var $a024ae = exports.default || module.exports;
@@ -13028,25 +13030,9 @@ exports.default = _default;
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    {
-      staticClass: "col",
-      class: [
-        _vm.span && "col-" + _vm.span,
-        _vm.offset && "offset-" + _vm.offset
-      ],
-      style: {
-        paddingLeft: _vm.gutter / 2 + "px",
-        paddingRight: _vm.gutter / 2 + "px"
-      }
-    },
-    [
-      _c(
-        "div",
-        { staticStyle: { border: "1px solid green", height: "100px" } },
-        [_vm._t("default")],
-        2
-      )
-    ]
+    { staticClass: "col", class: _vm.colClass, style: _vm.culStyle },
+    [_vm._t("default")],
+    2
   )
 }
 var staticRenderFns = []
