@@ -107,3 +107,154 @@
 .wrapper .errorMessage[data-v-ebf858] {
   color: #F1453D;
 }
+.row {
+  display: flex;
+  margin: 0 -10px;
+}
+.col {
+  width: 50%;
+}
+.col.col-1 {
+  width: 4.1666666667%;
+}
+.col.col-2 {
+  width: 8.3333333333%;
+}
+.col.col-3 {
+  width: 12.5%;
+}
+.col.col-4 {
+  width: 16.6666666667%;
+}
+.col.col-5 {
+  width: 20.8333333333%;
+}
+.col.col-6 {
+  width: 25%;
+}
+.col.col-7 {
+  width: 29.1666666667%;
+}
+.col.col-8 {
+  width: 33.3333333333%;
+}
+.col.col-9 {
+  width: 37.5%;
+}
+.col.col-10 {
+  width: 41.6666666667%;
+}
+.col.col-11 {
+  width: 45.8333333333%;
+}
+.col.col-12 {
+  width: 50%;
+}
+.col.col-13 {
+  width: 54.1666666667%;
+}
+.col.col-14 {
+  width: 58.3333333333%;
+}
+.col.col-15 {
+  width: 62.5%;
+}
+.col.col-16 {
+  width: 66.6666666667%;
+}
+.col.col-17 {
+  width: 70.8333333333%;
+}
+.col.col-18 {
+  width: 75%;
+}
+.col.col-19 {
+  width: 79.1666666667%;
+}
+.col.col-20 {
+  width: 83.3333333333%;
+}
+.col.col-21 {
+  width: 87.5%;
+}
+.col.col-22 {
+  width: 91.6666666667%;
+}
+.col.col-23 {
+  width: 95.8333333333%;
+}
+.col.col-24 {
+  width: 100%;
+}
+.col.offset-1 {
+  margin-left: 4.1666666667%;
+}
+.col.offset-2 {
+  margin-left: 8.3333333333%;
+}
+.col.offset-3 {
+  margin-left: 12.5%;
+}
+.col.offset-4 {
+  margin-left: 16.6666666667%;
+}
+.col.offset-5 {
+  margin-left: 20.8333333333%;
+}
+.col.offset-6 {
+  margin-left: 25%;
+}
+.col.offset-7 {
+  margin-left: 29.1666666667%;
+}
+.col.offset-8 {
+  margin-left: 33.3333333333%;
+}
+.col.offset-9 {
+  margin-left: 37.5%;
+}
+.col.offset-10 {
+  margin-left: 41.6666666667%;
+}
+.col.offset-11 {
+  margin-left: 45.8333333333%;
+}
+.col.offset-12 {
+  margin-left: 50%;
+}
+.col.offset-13 {
+  margin-left: 54.1666666667%;
+}
+.col.offset-14 {
+  margin-left: 58.3333333333%;
+}
+.col.offset-15 {
+  margin-left: 62.5%;
+}
+.col.offset-16 {
+  margin-left: 66.6666666667%;
+}
+.col.offset-17 {
+  margin-left: 70.8333333333%;
+}
+.col.offset-18 {
+  margin-left: 75%;
+}
+.col.offset-19 {
+  margin-left: 79.1666666667%;
+}
+.col.offset-20 {
+  margin-left: 83.3333333333%;
+}
+.col.offset-21 {
+  margin-left: 87.5%;
+}
+.col.offset-22 {
+  margin-left: 91.6666666667%;
+}
+.col.offset-23 {
+  margin-left: 95.8333333333%;
+}
+.col.offset-24 {
+  margin-left: 100%;
+}
