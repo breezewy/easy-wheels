@@ -40,7 +40,7 @@ export default {
 <style lang="scss">
   .row{
     display: flex;
-    margin:0 -10px;
+    flex-wrap: wrap;
     &.align-left{
       justify-content: flex-start;
     }
