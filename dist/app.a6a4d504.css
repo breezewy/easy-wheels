@@ -848,3 +848,15 @@
     margin-left: 100%;
   }
 }
+.layout[data-v-93d8af] {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  border: 1px solid red;
+}
+.layout.hasSider[data-v-93d8af] {
+  flex-direction: row;
+}
+.content[data-v-6d355e] {
+  flex-grow: 1;
+}
