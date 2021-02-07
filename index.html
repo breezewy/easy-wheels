@@ -41,15 +41,30 @@
       border:1px solid #666;
       min-height:100px;
     }
+    .sider{
+      background:#333;
+      width:150px;
+    }
+    .sider.slide-enter, .sider.slide-leave-to{
+      margin-left:-150px;
+    }
+    .header{
+      background:#999;
+      height:100px;
+    }
+    .footer{
+      background:#ccc;
+      height:50px;
+    }
   </style>
   <div id="app">
     <w-layout style="height:100vh;">
-      <w-sider class="demo">sider</w-sider>
+      <w-sider>sider</w-sider>
       
       <w-layout>
-        <w-header class="demo">header</w-header>
-        <w-content class="demo">content</w-content>
-        <w-footer class="demo">footer</w-footer>
+        <w-header >header</w-header>
+        <w-content >content</w-content>
+        <w-footer >footer</w-footer>
       </w-layout>
       
       

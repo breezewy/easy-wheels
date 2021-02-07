@@ -852,11 +852,24 @@
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  border: 1px solid red;
 }
 .layout.hasSider[data-v-93d8af] {
   flex-direction: row;
 }
 .content[data-v-6d355e] {
   flex-grow: 1;
+}
+.sider[data-v-a5f7c6] {
+  position: relative;
+}
+.sider > button[data-v-a5f7c6] {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.slide-enter-active[data-v-a5f7c6], .slide-leave-active[data-v-a5f7c6] {
+  transition: all 0.5s;
+}
+.slide-enter[data-v-a5f7c6], .slide-leave-to[data-v-a5f7c6] {
+  margin-left: -200px;
 }
