@@ -13047,7 +13047,7 @@ var _default = {
           narrowPc = this.narrowPc,
           pc = this.pc,
           widePc = this.widePc;
-      return [span && "col-".concat(span), offset && "offset-".concat(offset), ipad && ["col-ipad-".concat(ipad.span)], narrowPc && ["col-narrow-pc-".concat(narrowPc.span)], pc && ["col-pc-".concat(pc.span)], widePc && ["col-wide-pc-".concat(widePc.span)]];
+      return [span && "col-".concat(span), offset && "offset-".concat(offset), ipad ? ["col-ipad-".concat(ipad.span)] : [], narrowPc ? ["col-narrow-pc-".concat(narrowPc.span)] : [], pc ? ["col-pc-".concat(pc.span)] : [], widePc ? ["col-wide-pc-".concat(widePc.span)] : []];
     },
     culStyle: function culStyle() {
       return {
