@@ -42,8 +42,17 @@ new Vue({
     message:'hi'
   },
   created() {
-    this.$toast('这是很长的文本', {
-     enableHtml:true
+    this.$toast('你智商需要充值！', {
+      position:'middle',
+      enableHtml: false,
+      closeButton: {
+        text: '已充值',
+        callback() {
+          console.log('他说已经充值了')
+        }
+      },
+      autoClose: false,
+      autoCloseDelay:5
     })
   },
   methods: {

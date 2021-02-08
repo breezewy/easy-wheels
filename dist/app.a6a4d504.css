@@ -876,7 +876,6 @@
 .toast[data-v-6e6f57] {
   color: #fff;
   position: fixed;
-  top: 0;
   left: 50%;
   transform: translate(-50%);
   font-size: 14px;
@@ -900,4 +899,16 @@
   height: 100%;
   border-left: 1px solid #666;
   margin-left: 16px;
+}
+.toast.position-top[data-v-6e6f57] {
+  top: 0;
+  transform: translateX(-50%);
+}
+.toast.position-bottom[data-v-6e6f57] {
+  bottom: 0;
+  transform: translateX(-50%);
+}
+.toast.position-middle[data-v-6e6f57] {
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
