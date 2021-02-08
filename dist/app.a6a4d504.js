@@ -13598,6 +13598,7 @@ var _default = {
     },
     close: function close() {
       this.$el.remove();
+      this.$emit('close');
       this.$destroy();
     },
     log: function log() {
@@ -13710,7 +13711,10 @@ var _default = {
       currentToast = createToast({
         Vue: Vue,
         message: message,
-        propsData: toastOptions
+        propsData: toastOptions,
+        onClose: function onClose() {
+          currentToast = null;
+        }
       });
     };
   }
@@ -13720,13 +13724,15 @@ exports.default = _default;
 function createToast(_ref) {
   var Vue = _ref.Vue,
       message = _ref.message,
-      propsData = _ref.propsData;
+      propsData = _ref.propsData,
+      onClose = _ref.onClose;
   var Constructor = Vue.extend(_toast.default);
   var toast = new Constructor({
     propsData: propsData
   });
   toast.$slots.default = [message];
   toast.$mount();
+  toast.$on('close', onClose);
   document.body.appendChild(toast.$el);
   return toast;
 }
@@ -24876,7 +24882,7 @@ new _vue.default({
   methods: {
     showToast: function showToast() {
       this.$toast("\u4F60\u7684\u667A\u5546\u4F59\u989D\u4E3A".concat(parseInt(Math.random() * 100), ",\u4F60\u667A\u5546\u9700\u8981\u5145\u503C\uFF01"), {
-        position: 'middle',
+        position: 'bottom',
         enableHtml: false,
         closeButton: {
           text: '已充值',

@@ -873,7 +873,18 @@
 .slide-enter[data-v-a5f7c6], .slide-leave-to[data-v-a5f7c6] {
   margin-left: -200px;
 }
+@keyframes fade-in-data-v-6e6f57 {
+0% {
+    opacity: 0;
+    transform: translateY(100%);
+}
+100% {
+    opacity: 1;
+    transform: translateY(0%);
+}
+}
 .toast[data-v-6e6f57] {
+  animation: fade-in-data-v-6e6f57 1s linear;
   color: #fff;
   position: fixed;
   left: 50%;
