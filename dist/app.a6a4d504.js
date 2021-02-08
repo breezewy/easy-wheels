@@ -13538,6 +13538,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
 var _default = {
   name: 'wToast',
   props: {
@@ -13593,7 +13595,7 @@ var _default = {
       var _this2 = this;
 
       this.$nextTick(function () {
-        _this2.$refs.line.style.height = _this2.$refs.wrapper.getBoundingClientRect().height + 'px';
+        _this2.$refs.line.style.height = _this2.$refs.toast.getBoundingClientRect().height + 'px';
       });
     },
     close: function close() {
@@ -13626,10 +13628,8 @@ exports.default = _default;
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { ref: "wrapper", staticClass: "toast", class: _vm.toastClasses },
-    [
+  return _c("div", { staticClass: "wrapper", class: _vm.toastClasses }, [
+    _c("div", { ref: "toast", staticClass: "toast" }, [
       _c(
         "div",
         { staticClass: "message" },
@@ -13649,11 +13649,11 @@ exports.default = _default;
         ? _c(
             "span",
             { staticClass: "close", on: { click: _vm.onClickClose } },
-            [_vm._v("\n    " + _vm._s(_vm.closeButton.text) + "\n  ")]
+            [_vm._v("\n      " + _vm._s(_vm.closeButton.text) + "\n    ")]
           )
         : _vm._e()
-    ]
-  )
+    ])
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -24880,9 +24880,18 @@ new _vue.default({
   },
   created: function created() {},
   methods: {
-    showToast: function showToast() {
+    showToast1: function showToast1() {
+      this.showToast('top');
+    },
+    showToast2: function showToast2() {
+      this.showToast('middle');
+    },
+    showToast3: function showToast3() {
+      this.showToast('bottom');
+    },
+    showToast: function showToast(position) {
       this.$toast("\u4F60\u7684\u667A\u5546\u4F59\u989D\u4E3A".concat(parseInt(Math.random() * 100), ",\u4F60\u667A\u5546\u9700\u8981\u5145\u503C\uFF01"), {
-        position: 'bottom',
+        position: position,
         enableHtml: false,
         closeButton: {
           text: '已充值',
