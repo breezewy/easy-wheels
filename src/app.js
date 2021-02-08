@@ -10,7 +10,8 @@ import Header from './header'
 import Content from './content'
 import Footer from './footer'
 import Sider from './sider'
-
+import Toast from './toast'
+import plugin from './plugin'
 
 Vue.component('w-button', Button)
 Vue.component('w-icon', Icon)
@@ -23,9 +24,12 @@ Vue.component('w-header', Header)
 Vue.component('w-content', Content)
 Vue.component('w-footer', Footer)
 Vue.component('w-sider',Sider)
-
+Vue.component('w-toast', Toast)
+Vue.use(plugin)
 import chai from 'chai'
 import spies from 'chai-spies'
+
+
 const expect = chai.expect
 chai.use(spies)
 
@@ -38,20 +42,11 @@ new Vue({
     message:'hi'
   },
   created() {
-    setTimeout(() => {
-      let event = new Event('change')
-      let inputElement = this.$el.querySelector('input')
-      if (inputElement) {
-        inputElement.dispatchEvent(event)
-      }
-    },2000)
+
   },
   methods: {
-    inputChange(e) {
-      console.log(e)
-    },
-    changeMessage() {
-      this.message += 'i'
+    showToast() {
+      this.$toast('我是message')
     }
   }
 })
