@@ -42,11 +42,13 @@ new Vue({
     message:'hi'
   },
   created() {
-
+    this.$toast('这是很长的文本', {
+     enableHtml:true
+    })
   },
   methods: {
     showToast() {
-      this.$toast('我是message')
+      
     }
   }
 })
