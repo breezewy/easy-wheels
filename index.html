@@ -23,10 +23,6 @@
       --border-color-hover: #666;
     }
 
-    #app {
-      
-    }
-
     body {
       font-size: var(--font-size);
     }
@@ -36,9 +32,33 @@
 
 <body>
   <div id="app">
-    <button @click="showToast1">top</button>
-    <button @click="showToast2">middle</button>
-    <button @click="showToast3">bottom</button>
+    <w-tabs :selected.sync="selectedTab"></w-tabs>
+      <w-tabs-head>
+        <template slot="actions">
+         <button>设置</button>
+        </template>
+        <w-tabs-item name="woman">
+          <w-icon name="settings"></w-icon>美女
+        </w-tabs-item>
+        <w-tabs-item name="finance" disabled>
+          财经
+        </w-tabs-item>
+        <w-tabs-item name="sports">
+          体育
+        </w-tabs-item>
+      </w-tabs-head>
+      <w-tabs-body>
+        <w-tabs-pane name="woman">
+          美女相关资讯
+        </w-tabs-pane>
+        <w-tabs-pane name="finance">
+          财经相关资讯
+        </w-tabs-pane>
+        <w-tabs-pane name="sports">
+          体育相关资讯
+        </w-tabs-pane>
+      </w-tabs-body>
+    </w-tabs>
   </div>
 
   <script src="./src/app.js"></script>
