@@ -5,8 +5,8 @@
   "main": "dist/index.js",
   "scripts": {
     "start":"npx parcel index.html --no-cache",
-    "dev-test-npx": "npx parcel watch test/* --no-cache & karma start",
-    "dev-test": "parcel watch test/* --no-cache & karma start",
+    "dev-test-npx": "npx parcel watch test/* --no-cache",
+    "dev-test": "npx karma start",
     "test": "npx parcel build test/* --no-cache --no-minify && karma start --single-run"
   },
   "repository": {

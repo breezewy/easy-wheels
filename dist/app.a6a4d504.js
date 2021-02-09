@@ -13602,9 +13602,6 @@ var _default = {
       this.$emit('close');
       this.$destroy();
     },
-    log: function log() {
-      console.log('测试');
-    },
     onClickClose: function onClickClose() {
       this.close();
 

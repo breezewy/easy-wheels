@@ -73,9 +73,6 @@ export default {
       this.$emit('close')
       this.$destroy()
     },
-    log(){
-      console.log('测试')
-    },
     onClickClose(){
       this.close()
       if(this.closeButton && typeof this.closeButton.callback === 'function'){
