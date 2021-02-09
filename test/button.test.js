@@ -54,10 +54,10 @@ describe('Button', () => {
         document.body.appendChild(div)
         const Constructor = Vue.extend(Button)
         const vm = new Constructor({
-        propsData: {
-            icon: 'settings',
-            iconPosition: 'right'
-        }
+            propsData: {
+                icon: 'settings',
+                iconPosition: 'right'
+            }
         }).$mount(div)
         const icon = vm.$el.querySelector('svg')
         expect(getComputedStyle(icon).order).to.eq('2')

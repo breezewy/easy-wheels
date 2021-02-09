@@ -13544,12 +13544,11 @@ var _default = {
   name: 'wToast',
   props: {
     autoClose: {
-      type: Boolean,
-      default: true
-    },
-    autoCloseDelay: {
-      type: Number,
-      default: 3
+      type: [Boolean, Number],
+      default: 5,
+      validator: function validator(value) {
+        return value === false || typeof value === 'number';
+      }
     },
     closeButton: {
       type: Object,
@@ -24899,8 +24898,7 @@ new _vue.default({
             console.log('他说已经充值了');
           }
         },
-        autoClose: false,
-        autoCloseDelay: 5
+        autoClose: 3
       });
     }
   }
