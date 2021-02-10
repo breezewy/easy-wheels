@@ -6,7 +6,8 @@
 
 <script>
 export default {
-  name:'wTabsPane'
+  name:'wTabsPane',
+  inject:['eventBus'],
 }
 </script>
 

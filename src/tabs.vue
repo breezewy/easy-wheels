@@ -5,8 +5,14 @@
 </template>
 
 <script>
+import Vue from 'vue'
 export default {
   name:'wTabs',
+  data(){
+    return {
+      eventBus: new Vue()
+    }
+  },
   props:{
     selected:{
       type:String,
@@ -20,8 +26,16 @@ export default {
       }
     }
   },
+  provide(){
+    return {
+      eventBus: this.eventBus,
+      foo:'bar'
+    }
+  },
   created(){
-    // this.$emit('update:selected','xxx')
+    console.log(this)
+    console.log(this.eventBus)
+    this.$emit('update:selected','xxx')
   }
 }
 </script>

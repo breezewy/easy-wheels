@@ -7,7 +7,11 @@
 
 <script>
 export default {
-  name:'wTabsHeader'
+  name:'wTabsHeader',
+  inject:['eventBus'],
+  created(){
+    console.log(this.eventBus)
+  }
 }
 </script>
 
