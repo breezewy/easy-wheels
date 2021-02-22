@@ -766,3 +766,26 @@
     margin-left: 16px;
 }
 
+.tabs-header[data-v-54e01e] {
+  display: flex;
+  height: 40px;
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid red;
+}
+.tabs-header > .actions-warpper[data-v-54e01e] {
+    margin-left: auto;
+}
+
+.tabs-item[data-v-8b35e2] {
+  flex-shrink: 0;
+  padding: 0 2em;
+}
+.tabs-item.active[data-v-8b35e2] {
+    background: red;
+}
+
+.tabs-pane.active[data-v-19427a] {
+  background: red;
+}
+
