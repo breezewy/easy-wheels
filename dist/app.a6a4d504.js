@@ -13777,7 +13777,19 @@ var _default = {
     };
   },
   mounted: function mounted() {
-    this.eventBus.$emit('update:selected', this.selected);
+    var _this = this;
+
+    this.$children.forEach(function (vm) {
+      if (vm.$options.name === 'wTabsHeader') {
+        vm.$children.forEach(function (item) {
+          if (item.$options.name === 'wTabsItem' && item.name === _this.selected) {
+            console.log(item.$el);
+
+            _this.eventBus.$emit('update:selected', _this.selected, item);
+          }
+        });
+      }
+    });
   }
 };
 exports.default = _default;
@@ -13844,10 +13856,16 @@ exports.default = void 0;
 //
 //
 //
+//
 var _default = {
   name: 'wTabsHeader',
   inject: ['eventBus'],
-  created: function created() {}
+  created: function created() {
+    this.eventBus.$on('update:selected', function (item, vm) {
+      console.log(item);
+      console.log(vm);
+    });
+  }
 };
 exports.default = _default;
         var $54e01e = exports.default || module.exports;
@@ -13867,6 +13885,8 @@ exports.default = _default;
     { staticClass: "tabs-header" },
     [
       _vm._t("default"),
+      _vm._v(" "),
+      _c("div", { ref: "line", staticClass: "line" }),
       _vm._v(" "),
       _c("div", { staticClass: "actions-warpper" }, [_vm._t("actions")], 2)
     ],
@@ -14018,7 +14038,7 @@ var _default = {
   },
   methods: {
     xxx: function xxx() {
-      this.eventBus.$emit('update:selected', this.name);
+      this.eventBus.$emit('update:selected', this.name, this);
     }
   }
 };
