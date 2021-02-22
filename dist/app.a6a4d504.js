@@ -13847,9 +13847,7 @@ exports.default = void 0;
 var _default = {
   name: 'wTabsHeader',
   inject: ['eventBus'],
-  created: function created() {// console.log('爷爷给爸爸的eventBus')
-    // console.log(this.eventBus)
-  }
+  created: function created() {}
 };
 exports.default = _default;
         var $54e01e = exports.default || module.exports;

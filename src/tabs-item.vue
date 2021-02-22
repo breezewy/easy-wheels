@@ -48,8 +48,12 @@ export default {
     &.active{
       background:red;
     }
+    cursor: pointer;
     flex-shrink: 0;
     padding:0 2em;
+    height:100%;
+    display: flex;
+    align-items: center;
   }
 
 </style>

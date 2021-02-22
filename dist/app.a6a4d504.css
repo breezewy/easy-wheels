@@ -770,7 +770,6 @@
   display: flex;
   height: 40px;
   justify-content: flex-start;
-  align-items: center;
   border: 1px solid red;
 }
 .tabs-header > .actions-warpper[data-v-54e01e] {
@@ -778,8 +777,12 @@
 }
 
 .tabs-item[data-v-8b35e2] {
+  cursor: pointer;
   flex-shrink: 0;
   padding: 0 2em;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 .tabs-item.active[data-v-8b35e2] {
     background: red;
