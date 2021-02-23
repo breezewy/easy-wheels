@@ -776,7 +776,7 @@
     position: absolute;
     bottom: 0;
     border-bottom: 1px solid blue;
-    width: 100px;
+    transition: all 200ms;
 }
 .tabs-header > .actions-warpper[data-v-54e01e] {
     margin-left: auto;

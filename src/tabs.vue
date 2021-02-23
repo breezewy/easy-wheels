@@ -35,10 +35,9 @@ export default {
   mounted(){
     this.$children.forEach((vm) => {
       if(vm.$options.name ==='wTabsHeader'){
-        vm.$children.forEach((item) => {
-          if(item.$options.name === 'wTabsItem' && item.name=== this.selected) {
-            console.log(item.$el)
-            this.eventBus.$emit('update:selected',this.selected,item)
+        vm.$children.forEach((childVm) => {
+          if(childVm.$options.name === 'wTabsItem' && childVm.name=== this.selected) {
+            this.eventBus.$emit('update:selected',this.selected,childVm)
           }
         })
       }
