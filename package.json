@@ -4,9 +4,9 @@
   "description": "'这是一个UI框架'",
   "main": "dist/index.js",
   "scripts": {
-    "start":"npx parcel index.html --no-cache",
+    "start": "npx parcel index.html --no-cache",
     "dev-test-npx": "npx parcel watch test/* --no-cache",
-    "dev-test": "npx karma start",
+    "dev-test": "karma start",
     "test": "npx parcel build test/* --no-cache --no-minify && karma start --single-run"
   },
   "repository": {
@@ -43,7 +43,8 @@
     "sass": "^1.32.5",
     "sinon": "^9.2.4",
     "sinon-chai": "^3.5.0",
-    "vue-template-compiler": "^2.6.12"
+    "vue-template-compiler": "^2.6.12",
+    "vuepress": "^1.8.2"
   },
   "alias": {
     "vue": "./node_modules/vue/dist/vue.common.js"
