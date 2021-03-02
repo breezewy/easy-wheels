@@ -41,26 +41,33 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+$font-size:14px;
+$button-height:32px;
+$border-radius:4px;
+$border-color:#999;
+$border-color-hover:#666;
+$button-bg:white;
+$button-avtive-bg:#eee;
 @keyframes spin {
   0% {transform: rotate(0deg);}
   100% {transform: rotate(360deg);}
 }
 .w-button {
-  font-size: var(--font-size);
-  height: var(--button-height);
+  font-size: $font-size;
+  height: $button-height;
   padding: 0 1em;
-  border-radius: var(--border-radius);
-  border: 1px solid var(--border-color);
-  background: var(--button-bg);
+  border-radius: $border-radius;
+  border: 1px solid $border-color;
+  background: $button-bg;
   display: inline-flex;
   justify-content: center;
   align-items: center;
   vertical-align: middle;
   &:hover {
-    border-color: var(--border-color-hover);
+    border-color: $border-color-hover;
   }
   &:active {
-    background-color: var(--button-active-bg);
+    background-color: $button-avtive-bg;
   }
   &:focus {
     outline: none;

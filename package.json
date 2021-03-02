@@ -7,7 +7,9 @@
     "start": "npx parcel index.html --no-cache",
     "dev-test-npx": "npx parcel watch test/* --no-cache",
     "dev-test": "karma start",
-    "test": "npx parcel build test/* --no-cache --no-minify && karma start --single-run"
+    "test": "npx parcel build test/* --no-cache --no-minify && karma start --single-run",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
   },
   "repository": {
     "type": "git",
@@ -25,6 +27,7 @@
   "homepage": "https://github.com/breezewy/easy-wheels#readme",
   "dependencies": {
     "de-indent": "^1.0.2",
+    "node-sass": "^4.14.1",
     "vue": "^2.6.12",
     "vue-hot-reload-api": "^2.3.4"
   },
@@ -41,6 +44,7 @@
     "mocha": "^8.2.1",
     "parcel-bundler": "^1.12.4",
     "sass": "^1.32.5",
+    "sass-loader": "^7.3.1",
     "sinon": "^9.2.4",
     "sinon-chai": "^3.5.0",
     "vue-template-compiler": "^2.6.12",
