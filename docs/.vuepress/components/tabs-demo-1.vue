@@ -1,19 +1,19 @@
 <template>
-  <div style="padding-top: 16px;">
+  <div style="paddinw-top: 16px;">
     <h2>简单用法</h2>
     <p>
       <strong>预览</strong>
     </p>
-    <g-tabs :selected="selected">
-      <g-tabs-head>
-        <g-tabs-item name="1">1</g-tabs-item>
-        <g-tabs-item name="2">2</g-tabs-item>
-      </g-tabs-head>
-      <g-tabs-body>
-        <g-tabs-pane name="1">content 1</g-tabs-pane>
-        <g-tabs-pane name="2">content 2</g-tabs-pane>
-      </g-tabs-body>
-    </g-tabs>
+    <w-tabs :selected="selected">
+      <w-tabs-head>
+        <w-tabs-item name="1">1</w-tabs-item>
+        <w-tabs-item name="2">2</w-tabs-item>
+      </w-tabs-head>
+      <w-tabs-body>
+        <w-tabs-pane name="1">content 1</w-tabs-pane>
+        <w-tabs-pane name="2">content 2</w-tabs-pane>
+      </w-tabs-body>
+    </w-tabs>
 
     <p>
       <strong>代码</strong>
@@ -36,16 +36,16 @@
           data:{
             selected: '1'
           }
-          <g-tabs :selected="selected">
-            <g-tabs-head>
-              <g-tabs-item name="1">1</g-tabs-item>
-              <g-tabs-item name="2">2</g-tabs-item>
-            </g-tabs-head>
-            <g-tabs-body>
-              <g-tabs-pane name="1">content 1</g-tabs-pane>
-              <g-tabs-pane name="2">content 2</g-tabs-pane>
-            </g-tabs-body>
-          </g-tabs>
+          <w-tabs :selected="selected">
+            <w-tabs-head>
+              <w-tabs-item name="1">1</w-tabs-item>
+              <w-tabs-item name="2">2</w-tabs-item>
+            </w-tabs-head>
+            <w-tabs-body>
+              <w-tabs-pane name="1">content 1</w-tabs-pane>
+              <w-tabs-pane name="2">content 2</w-tabs-pane>
+            </w-tabs-body>
+          </w-tabs>
       `.replace(/^ {8}/gm, '').trim()
       }
     }
