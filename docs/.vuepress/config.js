@@ -1,4 +1,5 @@
 module.exports = {
+  base:'/easy-wheels/',
   title: 'easy-wheels',
   description: '一个简易的 UI 框架',
   themeConfig: {

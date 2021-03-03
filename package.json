@@ -27,7 +27,6 @@
   "homepage": "https://github.com/breezewy/easy-wheels#readme",
   "dependencies": {
     "de-indent": "^1.0.2",
-    "node-sass": "^4.14.1",
     "vue": "^2.6.12",
     "vue-hot-reload-api": "^2.3.4"
   },
@@ -43,6 +42,7 @@
     "karma-sinon-chai": "^2.0.2",
     "mocha": "^8.2.1",
     "parcel-bundler": "^1.12.4",
+    "node-sass": "^4.14.1",
     "sass": "^1.32.5",
     "sass-loader": "^7.3.1",
     "sinon": "^9.2.4",

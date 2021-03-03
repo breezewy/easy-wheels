@@ -14,11 +14,11 @@
 </template>
 
 <script>
-import Button from '../../../src/button'
+import Button from '../../../src/button.vue'
 export default {
-  components:{
-    'w-button': Button
-  },
+  // components:{
+  //   'w-button': Button
+  // },
   data(){
     return {
       content:`
