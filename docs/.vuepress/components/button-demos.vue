@@ -4,11 +4,7 @@
     <w-button icon="settings">默认按钮</w-button>
     <w-button :loading="true">默认按钮</w-button>
     <w-button disabled>默认按钮</w-button>
-    <pre>
-      <code>
-        {{content}}
-      </code>
-    </pre>
+    <pre><code>{{content}}</code></pre>
   </div>
   
 </template>
@@ -16,9 +12,9 @@
 <script>
 import Button from '../../../src/button.vue'
 export default {
-  // components:{
-  //   'w-button': Button
-  // },
+  components:{
+    'w-button': Button
+  },
   data(){
     return {
       content:`
@@ -26,7 +22,7 @@ export default {
         <w-button icon="settings">默认按钮</w-button>
         <w-button :loading="true">默认按钮</w-button>
         <w-button disabled>默认按钮</w-button>
-      `
+      `.replace(/\t+| +/g,'').trim()
     }
   }
 }
