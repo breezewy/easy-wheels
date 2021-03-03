@@ -13866,15 +13866,21 @@ var _default = {
     var _this = this;
 
     this.eventBus.$on('update:selected', function (item, vm) {
-      var _vm$$el$getBoundingCl = vm.$el.getBoundingClientRect(),
-          width = _vm$$el$getBoundingCl.width,
-          height = _vm$$el$getBoundingCl.height,
-          top = _vm$$el$getBoundingCl.top,
-          left = _vm$$el$getBoundingCl.left;
-
-      _this.$refs.line.style.width = "".concat(width, "px");
-      _this.$refs.line.style.left = "".concat(left, "px");
+      _this.updateLinePosition(vm);
     });
+  },
+  methods: {
+    updateLinePosition: function updateLinePosition(selectedVm) {
+      var _selectedVm$$el$getBo = selectedVm.$el.getBoundingClientRect(),
+          width = _selectedVm$$el$getBo.width,
+          left = _selectedVm$$el$getBo.left;
+
+      var _this$$refs$head$getB = this.$refs.head.getBoundingClientRect(),
+          left2 = _this$$refs$head$getB.left;
+
+      this.$refs.line.style.width = "".concat(width, "px");
+      this.$refs.line.style.left = "".concat(left - left2, "px");
+    }
   }
 };
 exports.default = _default;
@@ -13892,7 +13898,7 @@ exports.default = _default;
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "tabs-header" },
+    { ref: "head", staticClass: "tabs-header" },
     [
       _vm._t("default"),
       _vm._v(" "),

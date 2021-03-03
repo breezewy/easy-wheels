@@ -28,7 +28,7 @@
       <w-col span="6">
         <div class="demoCol">6</div>
       </w-col>
-    </-row>
+    </w-row>
     <w-row class="demoRow">
       <w-col span="4">
         <div class="demoCol">4</div>

@@ -36,7 +36,7 @@
           data:{
             selected: '1'
           }
-          <w-tabs :selected="selected">
+          <w-tabs :selected.sync="selected">
             <w-tabs-head>
               <w-tabs-item name="1">1</w-tabs-item>
               <w-tabs-item name="2">2</w-tabs-item>
